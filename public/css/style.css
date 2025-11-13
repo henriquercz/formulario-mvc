@@ -1,0 +1,465 @@
+/**
+ * Arquivo: public/css/style.css
+ * Descrição: Estilos modernos e responsivos para Expedições Lumina.
+ * Autor: Henrique Rezende
+ * Data: 13/11/2025
+ * Versão: 1.0.0
+ */
+
+:root {
+    --cor-primaria: #0f172a;
+    --cor-secundaria: #1e293b;
+    --cor-acento: #3b82f6;
+    --cor-sucesso: #10b981;
+    --cor-atencao: #f59e0b;
+    --cor-perigo: #ef4444;
+    --cor-info: #06b6d4;
+    --cor-clara: #f8fafc;
+    --cor-texto: #334155;
+    --cor-borda: #e2e8f0;
+    --radius: 0.5rem;
+    --sombra: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --sombra-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-clara);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--sombra);
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo a:hover {
+    opacity: 0.9;
+}
+
+.navegacao ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navegacao a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s;
+}
+
+.navegacao a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.conteudo {
+    min-height: calc(100vh - 140px);
+    padding: 2rem 0;
+}
+
+.rodape {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--sombra);
+}
+
+.btn-primary {
+    background-color: var(--cor-acento);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-secondary {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #334155;
+}
+
+.btn-success {
+    background-color: var(--cor-sucesso);
+    color: white;
+}
+
+.btn-warning {
+    background-color: var(--cor-atencao);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--cor-perigo);
+    color: white;
+}
+
+.btn-info {
+    background-color: var(--cor-info);
+    color: white;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+.alert {
+    padding: 1rem;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+
+.alert-danger {
+    background-color: #fef2f2;
+    border-color: var(--cor-perigo);
+    color: #991b1b;
+}
+
+.alert-danger ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.cabecalho-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cabecalho-lista h2 {
+    color: var(--cor-primaria);
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.vazio {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra);
+}
+
+.vazio p {
+    font-size: 1.125rem;
+    color: var(--cor-texto);
+    margin-bottom: 1.5rem;
+}
+
+.expedicoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.cartao-expedicao {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-expedicao:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-lg);
+}
+
+.cartao-cabecalho {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cartao-cabecalho h3 {
+    color: var(--cor-primaria);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.status-planejada {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+.status-inscrições-abertas {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.status-em-andamento {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.status-concluída {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.cartao-corpo {
+    padding: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.info-item strong {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.info-item span {
+    font-weight: 500;
+}
+
+.nivel-leve {
+    color: var(--cor-sucesso);
+}
+
+.nivel-moderado {
+    color: var(--cor-atencao);
+}
+
+.nivel-intenso {
+    color: var(--cor-perigo);
+}
+
+.descricao {
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+.cartao-acoes {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--cor-borda);
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.form-inline {
+    display: inline;
+    margin: 0;
+}
+
+.form-inline button {
+    margin: 0;
+}
+
+.formulario-expedicao {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra);
+    padding: 2rem;
+}
+
+.cabecalho-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cabecalho-form h2 {
+    color: var(--cor-primaria);
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--cor-primaria);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--cor-acento);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-group input.erro,
+.form-group select.erro,
+.form-group textarea.erro {
+    border-color: var(--cor-perigo);
+}
+
+.msg-erro {
+    color: var(--cor-perigo);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-acoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cor-borda);
+}
+
+@media (max-width: 768px) {
+    .cabecalho .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navegacao ul {
+        justify-content: center;
+    }
+
+    .cabecalho-lista {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .expedicoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-acoes {
+        flex-direction: column;
+    }
+
+    .cartao-acoes {
+        justify-content: center;
+    }
+}
