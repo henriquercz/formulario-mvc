@@ -1,6 +1,6 @@
 ﻿# Expedições Lumina - Sistema MVC de Gestão de Expedições
 
-**Autor:** Henrique Rezende  
+**Autor:** Henrique Rezende e Artur Liu
 **Data:** 13/11/2025  
 **Versão:** 1.0.0  
 **Disciplina:** Programação WEB III  
@@ -179,4 +179,5 @@ Projeto desenvolvido para fins acadêmicos na disciplina Programação WEB III d
 
 - **Henrique Rezende** - [GitHub](https://github.com/henriquercz)
 - **Artur Liu** - [GitHub](https://github.com/liuzinho777)
+
 
